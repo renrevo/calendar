@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calendar Heatmap</title>
+</head>
+
+<body>
+
+    <div class="calendar">
+        <div class="calendar__header">
+            <button class="btn__previous" id="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <div class="calendar__group">
+                <span class="calendar__month" id="month"></span>
+                <span>,</span>
+                <span class="calendar__year" id="year"></span>
+            </div>
+            <button class="btn__next" id="next"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+
+        <div class="calendar__body">
+            <div class="month">
+                <div class="week week__label">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <!-- Add class heatmap heatmap__show for each and every day of that month -->
+                <!-- Range 1-4, 5-8, 9-12 -->
+                <div class="week week__days">
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day heatmap heatmap__show heatmap--r1"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                </div>
+                <div class="week week__days">
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show heatmap--r2"></div>
+                    <div class="day heatmap heatmap__show heatmap--r1"></div>
+                    <div class="day heatmap heatmap__show heatmap--r3"></div>
+                    <div class="day heatmap heatmap__show heatmap--r3"></div>
+                    <div class="day heatmap heatmap__show heatmap--r3"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                </div>
+                <div class="week week__days">
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                    <div class="day  heatmap heatmap__show"></div>
+                </div>
+                <div class="week week__days">
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                </div>
+                <div class="week week__days">
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day heatmap heatmap__show"></div>
+                </div>
+                <div class="week week__days">
+                    <div class="day heatmap heatmap__show"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

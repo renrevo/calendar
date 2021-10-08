@@ -1,0 +1,228 @@
+:root {
+    --padding: 1rem;
+    --margin: 1rem;
+    --font-family: 'Poppins', sans-serif;
+
+    --t1: 2rem;
+    --t2: 1.5rem;
+    --t3: 1.25rem;
+    --t4: 1rem;
+    --t5: 0.875rem;
+    --t6: 0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+.body {
+    position: relative;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.calendar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: fit-content;
+    padding: calc(var(--padding) * 0.75);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.08);
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: calc(var(--padding) * 0.5);
+        border-bottom: 2px solid hsla(0, 0%, 0%, 0.08);
+    }
+
+    &__group {
+        color: hsl(0, 0%, 12%);
+        font-size: var(--t4);
+        font-weight: 700;
+    }
+
+}
+
+.btn {
+
+    &__previous,
+    &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(var(--padding) * 0.5);
+        border-radius: 0.5rem;
+
+        >i {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            background-color: hsla(0, 0%, 0%, 0.04);
+        }
+
+    }
+
+}
+
+.month {
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: justify-content 240ms ease-in-out;
+}
+
+.week {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: fit-content;
+
+    &--range {
+
+        &:hover {
+            background-color: hsla(0, 0%, 0%, 0.04);
+            border-radius: 0.5rem;
+            transition: background-color 120ms ease-in-out;
+
+            >.day {
+
+                &:hover {
+                    background-color: unset;
+                }
+
+            }
+
+        }
+
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.25rem;
+    }
+
+    &__label {
+        color: hsl(0, 0%, 24%);
+        background-color: hsla(0, 0%, 0%, 0.04);
+        font-weight: 500;
+
+        >div {
+            font-size: var(--t5);
+            font-weight: 600;
+
+            &:nth-child(n + 2) {
+                margin-left: calc(var(--margin) * 0.125);
+            }
+
+        }
+
+    }
+
+    &__days {
+        margin-top: calc(var(--margin) * 0.25);
+        color: hsl(0, 0%, 24%);
+    }
+
+}
+
+.day {
+    font-size: var(--t5);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsla(0, 0%, 0%, 0.04);
+        transition: background-color 120ms ease-in-out;
+    }
+
+    &:nth-child(n + 2) {
+        margin-left: calc(var(--margin) * 0.125);
+    }
+
+    &--today {
+        background-color: hsla(216, 96%, 48%, 0.12);
+        color: hsl(216, 96%, 48%);
+        transition: background-color 120ms ease-in-out;
+    }
+
+    &--outside {
+        color: hsl(0, 0%, 60%);
+    }
+
+}
+
+.range {
+    // color: hsl(216, 96%, 48%);
+    background-color: hsla(216, 96%, 48%, 0.12);
+
+    &--start,
+    &--end {
+        color: hsl(216, 96%, 48%);
+        background-color: hsla(216, 96%, 48%, 0.12);
+        border: 2px solid hsl(216, 96%, 48%);
+    }
+
+    &:hover {
+        background-color: hsla(216, 96%, 48%, 0.12);
+    }
+
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(var(--margin) * 0.25);
+
+    &__today {
+        cursor: pointer;
+        font-size: var(--t5);
+        font-weight: 500;
+        padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+        border-radius: 0.5rem;
+        background-color: hsla(216, 96%, 48%, 0.12);
+        color: hsl(216, 96%, 48%);
+    }
+
+}
+
+.heatmap {
+
+    &__show {
+        background-color: hsla(0, 0%, 0%, 0.04);
+    }
+
+    &--r1 {
+        background-color: hsla(216, 96%, 48%, 0.24);
+    }
+
+    &--r2 {
+        background-color: hsla(216, 96%, 48%, 0.48);
+    }
+
+    &--r3 {
+        background-color: hsla(216, 96%, 48%, 0.72);
+    }
+
+}

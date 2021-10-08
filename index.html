@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calendar</title>
+</head>
+
+<body>
+
+    <div class="calendar">
+        <div class="calendar__header">
+            <button class="btn__previous" id="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <div class="calendar__group">
+                <span class="calendar__month" id="month"></span>
+                <span>,</span>
+                <span class="calendar__year" id="year"></span>
+            </div>
+            <button class="btn__next" id="next"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+
+        <div class="calendar__body">
+            <div class="month">
+                <div class="week week__label">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="week week__days week--range">
+                    <div class="day day--outside">26</div>
+                    <div class="day day--outside">27</div>
+                    <div class="day day--outside">28</div>
+                    <div class="day day--outside">29</div>
+                    <div class="day day--outside">30</div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                </div>
+                <div class="week week__days week--range">
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day day--today">8</div>
+                    <div class="day">9</div>
+                </div>
+                <div class="week week__days">
+                    <div class="day range range--start">10</div>
+                    <div class="day range">11</div>
+                    <div class="day range">12</div>
+                    <div class="day range">13</div>
+                    <div class="day range">14</div>
+                    <div class="day range">15</div>
+                    <div class="day range">16</div>
+                </div>
+                <div class="week week__days">
+                    <div class="day range">17</div>
+                    <div class="day range">18</div>
+                    <div class="day range range--end">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                </div>
+                <div class="week week__days">
+                    <div class="day">24</div>
+                    <div class="day">25</div>
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                </div>
+                <div class="week week__days">
+                    <div class="day">31</div>
+                    <div class="day day--outside">1</div>
+                    <div class="day day--outside">2</div>
+                    <div class="day day--outside">3</div>
+                    <div class="day day--outside">4</div>
+                    <div class="day day--outside">5</div>
+                    <div class="day day--outside">6</div>
+                </div>
+            </div>
+            <div class="tool">
+                <p class="tool__today">Today</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
